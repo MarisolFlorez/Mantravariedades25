@@ -1,131 +1,356 @@
 /*estilos de la marquesina publivitaria*/
 .marquesina-container {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
+  position: relative;
+  background-color: #ffc107; /* color 'warning' de Bootstrap */
+  color: #212529; /* text-dark */
+  padding: 0.5rem 3rem 0.5rem 1rem; /* espacio para el botón */
+  overflow: hidden;
+}
+
+.marquesina-inner {
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .marquesina-text {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll-marquesina 15s linear infinite;
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-marquesina 20s linear infinite;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .marquesina-container:hover .marquesina-text {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @keyframes scroll-marquesina {
-    0% {
-        transform: translateX(0%);
-    }
+  0% {
+    transform: translateX(0%);
+  }
 
-    100% {
-        transform: translateX(-100%);
-    }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
+.marquesina-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #212529;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
 
-/*estilos para el submenu tenis en menu general*/
+.marquesina-btn:hover {
+  background-color: #343a40;
+}
 
+@media (max-width: 600px) {
+  .marquesina-text {
+    font-size: 0.9rem;
+  }
+
+  .marquesina-btn {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* estilos para el Navbar o menu profesional */
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1020;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
-/*  Submenú de dropdown (Tenis) */
+/* Submenú */
 .dropdown-submenu {
-    position: relative;
+  position: relative;
 }
 
-.dropdown-submenu>.dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -0.5rem;
-    display: none;
-    position: absolute;
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -0.4rem;
+  border-radius: 0.25rem;
+  display: none;
 }
 
-.dropdown-submenu:hover>.dropdown-menu {
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a::after {
+  content: "▶";
+  float: right;
+  font-size: 0.6rem;
+  margin-left: 5px;
+}
+
+/* Carrito */
+.cart-badge {
+  background-color: red;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+/* Hover elegante */
+.navbar .nav-link:hover {
+  color: #0d6efd;
+  transition: color 0.3s ease;
+}
+
+/* Responsive mejoras */
+@media (max-width: 768px) {
+  .dropdown-submenu:hover > .dropdown-menu {
+    position: static;
+    margin: 0;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
     display: block;
+  }
 }
 
-/* Opcional: Añadir una flechita al submenú */
-.dropdown-submenu>a::after {
-    content: "▶";
-    float: right;
-    font-size: 0.6rem;
-    margin-left: 5px;
+/* estilos para modal de presentacion */
+.animate-slide {
+  animation: slideIn 0.5s ease-out;
 }
 
+.modal-content {
+  background-image: url("/Imagenes/imagenesIndex/fondoModalPresentacion.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #070707; /* texto claro */
+  border: 3px solid #fffbe6;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
 
-/* Estilos generales del carrusel */
+.modal-body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f8f8f8;
+  border: 3px solid #ddbb11;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.modal-body p,
+.modal-body li {
+  margin-bottom: 0.75rem;
+}
+
+.modal-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.modal-body {
+  background-color: rgba(0, 0, 0, 0.322); /* negro translúcido */
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive: tamaño de fuente para móviles */
+@media (max-width: 768px) {
+  .modal-body p,
+  .modal-body li {
+    font-size: 0.95rem;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+  }
+}
+
+/*carousel*/
 #carouselExampleIndicators {
-    max-width: 800px;
-    /* Ajusta el tamaño del carrusel */
-    margin: auto;
-    /* Centrar en la página */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    overflow: hidden;
-    /* Evita que las imágenes sobresalgan */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    /* Sombra para resaltar */
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajuste responsivo */
+.carousel-item img {
+  height: 500px;
+  object-fit: contain;
+  width: 100%;
+  background-color: #000;
 }
 
 @media (max-width: 768px) {
-    .carousel-item img {
-        max-height: 300px;
-        /* Reduce la altura en pantallas más pequeñas */
-    }
+  .carousel-item img {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
-    .carousel-item img {
-        max-height: 250px;
-        /* Ajusta aún más para móviles */
-    }
+  .carousel-item img {
+    height: 220px;
+  }
 }
 
-
-/* Imágenes dentro del carrusel */
-.carousel-item img {
-    object-fit: cover;
-    /* Mantiene el aspecto sin deformar */
-    border-radius: 10px;
-    /* Bordes redondeados en las imágenes */
-}
-
-/* Indicadores del carrusel */
+/* Indicadores más visibles y animados */
 .carousel-indicators button {
-    background-color: rgba(255, 255, 255, 0.5);
-    /* Color inicial */
-    border-radius: 50%;
-    /* Botones redondos */
-    width: 10px;
-    /* Tamaño de los indicadores */
-    height: 10px;
-    margin: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  border: none;
 }
 
 .carousel-indicators .active {
-    background-color: white;
-    /* Color cuando está activo */
+  background-color: #fff;
+  transform: scale(1.2);
 }
 
-/* Controles de navegación */
+/* Flechas de navegación estilizadas */
 .carousel-control-prev,
 .carousel-control-next {
-    filter: invert(100%);
-    /* Cambia el color a blanco */
-    opacity: 0.7;
-    /* Transparencia ligera */
-    transition: opacity 0.3s ease;
+  filter: invert(100%);
+  opacity: 0.6;
+  transition: 0.3s;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-    opacity: 1;
-    /* Más visibles al pasar el mouse */
+  opacity: 1;
+}
+
+/* Animación suave */
+.carousel-fade .carousel-item {
+  transition: opacity 1.2s ease-in-out;
+}
+
+/*estilos para el elemento de productos destacados*/
+.card img {
+  object-fit: cover;
+  height: 230px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/*estilos para el banner de promos*/
+.cta-banner {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* degradado azul moderno */
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 1100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.cta-banner h2 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cta-banner p {
+  color: #e0e0e0;
+}
+
+.cta-banner a.btn {
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-banner a.btn:hover {
+  transform: scale(1.05);
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+
+/*estilos para el footer*/
+
+/* Estilos para la burbuja de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.whatsapp-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #25d366; /* Color verde de WhatsApp */
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 2rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-button a:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button i {
+  font-size: 2.5rem;
+}
+
+/* Estilos responsivos (opcional) */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-button a {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .whatsapp-button i {
+    font-size: 2rem;
+  }
 }
