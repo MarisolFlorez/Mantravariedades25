@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ropa-Mantra-Variedades</title>
+    <!--LINK DE BOOTSTRAP-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--LINK DE ICONOS BOOTSTRAP-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!--google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/ropa.css" />
+  </head>
+  <body>
+    <!-- 🔔 Marquesina informativa -->
+    <div class="marquesina-container">
+      <div class="marquesina-inner">
+        <div class="marquesina-text" id="marquesina">
+          💬 <strong>Mantra Variedades</strong> — ¡Pregunte por lo que no vea,
+          lo conseguimos para usted!
+        </div>
+      </div>
+      <button
+        class="marquesina-btn"
+        id="toggleBtn"
+        aria-label="Pausar marquesina"
+      >
+        ⏸️
+      </button>
+    </div>
+    <br />
+    <br />
+
+    <!-- 🔝 Navbar o menú profesional -->
+    <nav class="navbar navbar-expand-lg bg-light shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="/Imagenes/ImagenesMenu/LOGO.png" alt="" /> Mantra
+          Variedades</a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Menú principal -->
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Inicio</a>
+            </li>
+
+            <!-- Dropdown con submenú -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Productos</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/ropa.html">Ropa</a></li>
+
+                <!-- Submenú estilo megamenú -->
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Tenis</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Hombre</a></li>
+                    <li><a class="dropdown-item" href="#">Mujer</a></li>
+                    <li><a class="dropdown-item" href="#">Infantil</a></li>
+                  </ul>
+                </li>
+
+                <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Todos los productos</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+
+            <!-- Carrito -->
+            <li class="nav-item ms-3">
+              <a class="nav-link position-relative" href="#">
+                🛒
+                <span class="cart-badge">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br/>
+
+    <!-- Categorías de ropa -->
+<div class="container categorias-container my-4">
+    <h5 class="text-center mb-3 fw-bold">Explora por Categoría</h5>
+    <div class="btn-group d-flex flex-wrap justify-content-center" role="group" aria-label="Categorías">
+      <input type="radio" class="btn-check" name="categoria" id="cat-blusas" autocomplete="off" checked>
+      <label class="btn categoria-btn" for="cat-blusas">
+        <i class="bi bi-shirt"></i> Blusas Dama
+      </label>
+  
+      <input type="radio" class="btn-check" name="categoria" id="cat-pantalones" autocomplete="off">
+      <label class="btn categoria-btn" for="cat-pantalones">
+        <i class="bi bi-slack"></i> Pantalones Dama
+      </label>
+  
+      <input type="radio" class="btn-check" name="categoria" id="cat-chaquetas" autocomplete="off">
+      <label class="btn categoria-btn" for="cat-chaquetas">
+        <i class="bi bi-journal"></i> Chaquetas Dama
+      </label>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+    <!--footer profesional-->
+    <footer class="footer text-dark pt-5 pb-4">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-3">
+            <h5 class="fw-bold">Mantra Variedades <sup>®</sup></h5>
+            <p>Estilo, comodidad y calidad. Tu tienda de confianza.</p>
+            <div class="social-icons">
+              <a href="#" class="me-2"><i class="bi bi-instagram fs-4"></i></a>
+              <a href="#" class="me-2"><i class="bi bi-facebook fs-4"></i></a>
+              <a href="#" class="me-2"><i class="bi bi-whatsapp fs-4"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <h6 class="fw-bold">Explora</h6>
+            <ul class="list-unstyled">
+              <li><a href="/reseñas.html" class="footer-link">Reseñas</a></li>
+              <li><a href="#" class="footer-link">Catálogo</a></li>
+              <li><a href="#" class="footer-link">FAQs</a></li>
+              <li><a href="#" class="footer-link">Políticas</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <h6 class="fw-bold">Contáctanos</h6>
+            <form>
+              <div class="mb-2">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Tu nombre"
+                />
+              </div>
+              <div class="mb-2">
+                <input
+                  type="email"
+                  class="form-control form-control-sm"
+                  placeholder="Tu email"
+                />
+              </div>
+              <div class="mb-2">
+                <textarea
+                  class="form-control form-control-sm"
+                  rows="2"
+                  placeholder="Tu mensaje"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-sm btn-gold">Enviar</button>
+            </form>
+          </div>
+
+          <div class="col-md-3 text-md-end">
+            <img
+              src="/Imagenes/ImagenesMenu/LOGO.png"
+              alt="Logo"
+              class="img-fluid mb-2"
+              style="max-width: 120px"
+            />
+            <p class="small mb-0">
+              &copy; <span id="footer-year"></span> Mantra Variedades. Todos los
+              derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--boton flotante de whatsapp-->
+    <div class="whatsapp-button">
+      <a
+        href="https://wa.me/3218658479"
+        target="_blank"
+        aria-label="Chat en Whatsapp"
+      >
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+
+    <!--SCRIPT DE funciones.js-->
+    <script src="/js/funciones.js"></script>
+    <!--SCRIPT DE BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

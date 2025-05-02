@@ -1,0 +1,260 @@
+/*estilos de la marquesina publivitaria*/
+.marquesina-container {
+  position: relative;
+  background-color: #add8e6; /* color 'warning' de Bootstrap */
+  color: #212529; /* text-dark */
+  padding: 0.5rem 3rem 0.5rem 1rem; /* espacio para el botón */
+  overflow: hidden;
+}
+
+.marquesina-inner {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquesina-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-marquesina 20s linear infinite;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.marquesina-container:hover .marquesina-text {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-marquesina {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquesina-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #212529;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.marquesina-btn:hover {
+  background-color: #343a40;
+}
+
+@media (max-width: 600px) {
+  .marquesina-text {
+    font-size: 0.9rem;
+  }
+
+  .marquesina-btn {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* estilos para el Navbar o menu profesional */
+.navbar {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1rem;
+  background-color: #90ee90;
+  border-bottom: 1px solid #d4af37;
+}
+
+/* Submenú */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -0.4rem;
+  border-radius: 0.25rem;
+  display: none;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a::after {
+  content: "▶";
+  float: right;
+  font-size: 0.6rem;
+  margin-left: 5px;
+}
+
+/* Carrito */
+.cart-badge {
+  background-color: #d4af37;
+  color: black;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+/* Hover elegante */
+.navbar .nav-link:hover {
+  color: #90ee90;
+  transition: color 0.3s ease;
+}
+
+/* Responsive mejoras */
+@media (max-width: 768px) {
+  .dropdown-submenu:hover > .dropdown-menu {
+    position: static;
+    margin: 0;
+  }
+
+  .dropdown-submenu > .dropdown-menu {
+    display: block;
+  }
+}
+
+/*estilos para las categorias de ropa*/
+.categorias-container {
+    background: rgb(173, 216, 230, 0.2); /* azul pastel semitransparente */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .categoria-btn {
+    background-color: white;
+    border: 2px solid rgb(173, 216, 230);
+    color: #333;
+    margin: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 1rem;
+  }
+  
+  .categoria-btn:hover {
+    background-color: rgb(152, 251, 152); /* verde pastel */
+    border-color: rgb(255, 215, 0); /* dorado */
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  }
+  
+  .btn-check:checked + .categoria-btn {
+    background-color: rgb(255, 215, 0);
+    color: #000;
+    border-color: rgb(255, 215, 0);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  .categoria-btn i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+  }
+  
+
+/*estilos para el footer*/
+.footer {
+    background: rgb(173, 216, 230); /* azul pastel */
+    color: #000;
+    font-size: 1rem;
+    border-top: 5px solid rgb(255, 215, 0); /* línea dorada arriba */
+  }
+  
+  .footer .footer-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .footer-link:hover {
+    color: rgb(255, 215, 0); /* dorado */
+  }
+  
+  .footer .social-icons a {
+    color: rgb(0, 0, 0);
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .footer .social-icons a:hover {
+    transform: scale(1.2);
+    color: rgb(111, 250, 111); /* verde pastel */
+  }
+  
+  .btn-gold {
+    background-color: rgb(255, 215, 0);
+    color: #000;
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-gold:hover {
+    background-color: #e6c200;
+    color: #000;
+  }
+  
+  
+  /* Estilos para la burbuja de WhatsApp */
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+  
+  .whatsapp-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25d366; /* Color verde de WhatsApp */
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 2rem;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .whatsapp-button a:hover {
+    transform: scale(1.1);
+  }
+  
+  .whatsapp-button i {
+    font-size: 2.5rem;
+  }
+  
+  /* Estilos responsivos (opcional) */
+  @media (max-width: 768px) {
+    .whatsapp-button {
+      bottom: 15px;
+      right: 15px;
+    }
+  
+    .whatsapp-button a {
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+    }
+  
+    .whatsapp-button i {
+      font-size: 2rem;
+    }
+  }

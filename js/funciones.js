@@ -42,4 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const presentacionModal = new bootstrap.Modal(document.getElementById("presentacion"))
     presentacionModal.show()
   })
+
+//funciones para el footer
+document.getElementById("footer-year").textContent = new Date().getFullYear();
   

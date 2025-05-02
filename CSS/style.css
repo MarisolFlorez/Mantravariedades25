@@ -1,7 +1,7 @@
 /*estilos de la marquesina publivitaria*/
 .marquesina-container {
   position: relative;
-  background-color: #ffc107; /* color 'warning' de Bootstrap */
+  background-color: #ADD8E6; /* color 'warning' de Bootstrap */
   color: #212529; /* text-dark */
   padding: 0.5rem 3rem 0.5rem 1rem; /* espacio para el botón */
   overflow: hidden;
@@ -70,8 +70,8 @@
 .navbar {
   font-family: "Segoe UI", sans-serif;
   font-size: 1rem;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  background-color: #90EE90;
+  border-bottom: 1px solid #D4AF37;
 }
 
 /* Submenú */
@@ -100,8 +100,8 @@
 
 /* Carrito */
 .cart-badge {
-  background-color: red;
-  color: white;
+  background-color: #D4AF37;
+  color: black;
   font-size: 0.75rem;
   font-weight: bold;
   border-radius: 50%;
@@ -113,7 +113,7 @@
 
 /* Hover elegante */
 .navbar .nav-link:hover {
-  color: #0d6efd;
+  color: #90EE90;
   transition: color 0.3s ease;
 }
 
@@ -140,7 +140,7 @@
   background-position: center;
   color: #070707; /* texto claro */
   border: 3px solid #fffbe6;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: #D4AF37;
 }
 
 .modal-body {
@@ -276,7 +276,7 @@
 
 /*estilos para el banner de promos*/
 .cta-banner {
-  background: linear-gradient(135deg, #1e3c72, #2a5298); /* degradado azul moderno */
+  background: linear-gradient(135deg, #90EE90, #2a5298); /* degradado azul moderno */
   border-radius: 12px;
   margin: 3rem auto;
   max-width: 1100px;
@@ -299,12 +299,52 @@
 
 .cta-banner a.btn:hover {
   transform: scale(1.05);
-  background-color: #f8f9fa;
+  background-color: #D4AF37;
+  color: black;
+}
+
+/*estilos para el footer*/
+.footer {
+  background: rgb(173, 216, 230); /* azul pastel */
+  color: #000;
+  font-size: 1rem;
+  border-top: 5px solid rgb(255, 215, 0); /* línea dorada arriba */
+}
+
+.footer .footer-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-link:hover {
+  color: rgb(255, 215, 0); /* dorado */
+}
+
+.footer .social-icons a {
+  color: rgb(0, 0, 0);
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  transform: scale(1.2);
+  color: rgb(111, 250, 111); /* verde pastel */
+}
+
+.btn-gold {
+  background-color: rgb(255, 215, 0);
+  color: #000;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #e6c200;
   color: #000;
 }
 
 
-/*estilos para el footer*/
+
 
 /* Estilos para la burbuja de WhatsApp */
 .whatsapp-button {
