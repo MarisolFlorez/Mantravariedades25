@@ -81,10 +81,9 @@
 
 .dropdown-submenu > .dropdown-menu {
   top: 0;
-  left: 100%;
-  margin-top: -0.4rem;
-  border-radius: 0.25rem;
-  display: none;
+  left: auto;
+  right: 100%; /* Cambia la dirección */
+  margin-top: -1px;
 }
 
 .dropdown-submenu:hover > .dropdown-menu {
@@ -144,7 +143,7 @@
     margin: 0.5rem;
     padding: 0.7rem 1.5rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
     border-radius: 1rem;
   }
   
@@ -167,6 +166,89 @@
     margin-right: 8px;
     font-size: 1.2rem;
   }
+
+/*estilos para las tarjetas segun la categoria seleccionada*/
+/* Estilos personalizados para las tarjetas de producto */
+.card {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.card-body {
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.card .btn {
+  background-color: #007bff;
+  border: none;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Contenedor centrado y con buen espaciado */
+.productos-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Mejora el margen entre tarjetas */
+#productos-container > div {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Animación para las tarjetas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Clase que se aplica a cada tarjeta */
+.producto-card {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+
   
 
 /*estilos para el footer*/

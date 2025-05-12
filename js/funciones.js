@@ -43,6 +43,57 @@ document.addEventListener("DOMContentLoaded", function () {
     presentacionModal.show()
   })
 
+//funcion para barra de busqueda
+// Lista de productos base (puedes reemplazarla por datos reales del backend más adelante)
+const productos = [
+  "Zapatos deportivos",
+  "Blusas dama estampadas",
+  "Camisas caballero manga larga",
+  "Calzado infantil para niñas",
+  "Calzado infantil para niños",
+  "Relojes de pulsera",
+  "Gorras planas",
+  "Bolsos de cuero",
+  "Bolsos casuales",
+  "Zapatos formales",
+  "Blusas dama sin mangas",
+  "Camisas caballero casuales"
+];
+
+const searchInput = document.getElementById("search-input");
+const suggestionsContainer = document.getElementById("search-suggestions");
+
+// Escucha los cambios en el input
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase().trim();
+  suggestionsContainer.innerHTML = ""; // Limpia sugerencias previas
+
+  if (query === "") return;
+
+  const resultados = productos.filter(producto =>
+    producto.toLowerCase().includes(query)
+  );
+
+  if (resultados.length === 0) {
+    suggestionsContainer.innerHTML = "<div class='no-result'>No se encontraron resultados.</div>";
+    return;
+  }
+
+  resultados.forEach(producto => {
+    const item = document.createElement("div");
+    item.classList.add("suggestion-item");
+    item.textContent = producto;
+    item.addEventListener("click", () => {
+      searchInput.value = producto;
+      suggestionsContainer.innerHTML = "";
+      // Aquí podrías redirigir o mostrar los productos filtrados, por ejemplo:
+      console.log("Buscar producto:", producto);
+    });
+    suggestionsContainer.appendChild(item);
+  });
+});
+
+
 //funciones para el footer
 document.getElementById("footer-year").textContent = new Date().getFullYear();
   

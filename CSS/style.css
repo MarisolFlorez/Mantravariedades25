@@ -194,6 +194,80 @@
   }
 }
 
+/* Estilos para la barra de búsqueda */
+.search-bar-container {
+    display: flex;
+    position: relative; /* Para posicionar las sugerencias */
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo según tu diseño */
+    margin: 1rem auto; /* Centrar la barra de búsqueda (opcional) */
+}
+
+#search-input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#search-button {
+    background-color: #ADD8E6; /* Color primario de Bootstrap */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#search-button:hover {
+    background-color: #90EE90;
+}
+
+#search-button i {
+    font-size: 1.2rem;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 100%; /* Mostrar debajo de la barra de búsqueda */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    margin-top: -2px; /* Para que no haya espacio entre la barra y las sugerencias */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1001; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Oculto por defecto */
+    padding: 0;
+    list-style: none;
+}
+
+.search-suggestions li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.search-suggestions li:hover {
+    background-color: #f8f9fa;
+}
+
+.search-suggestions li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+.no-result {
+  padding: 8px 12px;
+  color: #888;
+}
+
 /*carousel*/
 #carouselExampleIndicators {
   max-width: 900px;
