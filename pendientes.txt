@@ -1,0 +1,38 @@
+🧩 Orden sugerido para completar tu back-end:
+🔹 Fase 1 – Complementar estructuras base:
+categorias
+
+CRUD básico
+
+Asociar categorías a productos
+
+imagenes_producto
+
+Listar imágenes por producto
+
+Posibilidad de agregar una nueva
+
+carrito
+
+Permitir agregar/quitar productos por cliente
+
+Listar el carrito de un cliente
+
+🔹 Fase 2 – Extender funcionalidad del sistema:
+cupones
+
+Validar cupón en pedido
+
+Registrar su uso
+
+metodos_envio
+
+Listar métodos disponibles
+
+Incluirlos al momento de crear un pedido
+
+reseñas
+
+Crear reseña solo si el cliente compró el producto
+
+Listar reseñas por producto

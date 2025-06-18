@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>accesorios-mantra variedades</title>
+    <!--LINK DE BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet" />
+    <!--LINK DE ICONOS BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap"
+        rel="stylesheet" />
+
+    <!--link de mi hoja de estilos-->
+    <link rel="stylesheet" href="/CSS/componentes.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/accesorios.css" />
+</head>
+
+<body>
+    <!-- 🔔 Marquesina informativa -->
+    <div class="marquesina-container">
+        <div class="marquesina-inner">
+            <div class="marquesina-text" id="marquesina">
+                💬 <strong>Mantra Variedades</strong> — ¡Pregunte por lo que no vea,
+                lo conseguimos para usted!
+            </div>
+        </div>
+        <button class="marquesina-btn" id="toggleBtn" aria-label="Pausar marquesina">
+            ⏸️
+        </button>
+    </div>
+    <br>
+    <br>
+
+    <div id="header-placeholder"></div>
+    <br>
+
+    <section class="testimonios-creativos py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-6 fw-bold text-gradient">
+                Hasta 50% off en nuestros accesorios que deberias aprovechar!
+            </h2>
+            <br>
+
+            <section class="muestras py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5 display-6 fw-bold text-gradient">
+                        Lo que encontraras!
+                    </h2>
+                    <br>
+
+                    <!--lo que encontraras-->
+                    <div class="productos-scroll mb-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="/Imagenes/accesorios/muestras/relojes.jpg" class="card-img-top" alt="Relojes">
+                            <div class="card-body">
+                                <p class="card-text">Relojes con estilo único, modernos y estéticos.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="/Imagenes/accesorios/muestras/gorras.jpg" class="card-img-top" alt="Gorras">
+                            <div class="card-body">
+                                <p class="card-text">Gorras deportivas, urbanas y casuales para todos los gustos.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="/Imagenes/accesorios/muestras/cadenas.jpg" card-img-top" alt="Cadenas">
+                            <div class="card-body">
+                                <p class="card-text">Cadenas de diferentes estilos y materiales para complementar tu
+                                    look.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="/Imagenes/accesorios/muestras/invierno.jpg" class="card-img-top" alt="Invierno">
+                            <div class="card-body">
+                                <p class="card-text">Accesorios de invierno: gorros, bufandas y guantes con estilo.</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="/Imagenes/accesorios/muestras/verano.jpg" class="card-img-top" alt="Verano">
+                            <div class="card-body">
+                                <p class="card-text">Accesorios de verano: gafas de sol, sombreros y más.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <section class="muestras py-5">
+                        <div class="container">
+                            <h2 class="text-center mb-5 display-6 fw-bold text-gradient">
+                                Lque te gustaria ver? elige el boton de tu preferencia!
+                            </h2>
+                            <br>
+
+                            <!-- Botones para activar los canvas laterales -->
+                            <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+                                <a class="btn btn-success btn-animado" data-bs-toggle="offcanvas"
+                                    href="#offcanvasRelojes" role="button" aria-controls="offcanvasRelojes">
+                                    relojes
+                                </a>
+                                <button class="btn btn-success btn-animado" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasGorras" aria-controls="offcanvasGorras">
+                                    gorras
+                                </button>
+                                <a class="btn btn-success btn-animado" data-bs-toggle="offcanvas"
+                                    href="#offcanvasCadenas" role="button" aria-controls="offcanvasCadenas">
+                                    cadenas
+                                </a>
+                                <button class="btn btn-success btn-animado" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasInvierno" aria-controls="offcanvasInvierno">
+                                    invierno
+                                </button>
+                                <button class="btn btn-success btn-animado" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasVerano" aria-controls="offcanvasVerano">
+                                    verano
+                                </button>
+                            </div>
+                            <br>
+                            <br>
+
+                            <!-- Offcanvas Relojes -->
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRelojes"
+                                aria-labelledby="offcanvasRelojesLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasRelojesLabel">Relojes</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div>
+                                        Los relojes dan autenticidad a las personas, generan confianza y van bien con
+                                        todos los
+                                        estilos estandarizados.
+                                    </div>
+                                    <div class="dropdown mt-3">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown">
+                                            Tipos de relojes
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Hombres</a></li>
+                                            <li><a class="dropdown-item" href="#">Mujeres</a></li>
+                                            <li><a class="dropdown-item" href="#">Infantiles</a></li>
+                                            <li><a class="dropdown-item" href="#">Unisex</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Offcanvas Gorras -->
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasGorras"
+                                aria-labelledby="offcanvasGorrasLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasGorrasLabel">Gorras</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div>
+                                        Encuentra gorras modernas, deportivas y casuales para todos los estilos y
+                                        edades.
+                                    </div>
+                                    <div class="dropdown mt-3">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown">
+                                            Tipos de gorras
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Planas</a></li>
+                                            <li><a class="dropdown-item" href="#">Curvas</a></li>
+                                            <li><a class="dropdown-item" href="#">Snapback</a></li>
+                                            <li><a class="dropdown-item" href="#">Deportivas</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Offcanvas Cadenas -->
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCadenas"
+                                aria-labelledby="offcanvasCadenasLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasCadenasLabel">Cadenas</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div>
+                                        Cadenas de diferentes estilos y materiales para complementar tu look.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Offcanvas Invierno -->
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasInvierno"
+                                aria-labelledby="offcanvasInviernoLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasInviernoLabel">Invierno</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div>
+                                        Accesorios ideales para el invierno: gorros, bufandas y guantes para mantenerte
+                                        abrigado
+                                        con estilo.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Offcanvas Verano -->
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasVerano"
+                                aria-labelledby="offcanvasVeranoLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasVeranoLabel">Verano</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div>
+                                        Accesorios ideales para el verano: gafas de sol, sombreros, gorras ligeras y más
+                                        para
+                                        protegerte del sol con estilo.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- Cierre de .container de .muestras -->
+                    </section> <!-- Cierre de section.muestras -->
+                </div> <!-- Cierre de .container de .testimonios-creativos -->
+            </section> <!-- Cierre de section.testimonios-creativos -->
+
+            <!-- Ahora el footer queda fuera de los contenedores principales -->
+            <div id="footer-placeholder"></div>
+            <script>
+                // Header
+                fetch('/header.html')
+                    .then(res => res.text())
+                    .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+                // Footer
+                fetch('/footer.html')
+                    .then(res => res.text())
+                    .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+            </script>
+
+            <!--SCRIPT DE funciones.js-->
+            <script src="/js/funciones.js"></script>
+            <!--SCRIPT DE BOOTSTRAP-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
